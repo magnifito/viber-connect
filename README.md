@@ -1,10 +1,22 @@
-# Viber Button
+# Viber Connect
+
+[![npm version](https://img.shields.io/npm/v/@puralex/viber-connect?logo=npm&label=npm&color=7360F2)](https://www.npmjs.com/package/@puralex/viber-connect)
+[![npm downloads](https://img.shields.io/npm/dm/@puralex/viber-connect?color=7360F2)](https://www.npmjs.com/package/@puralex/viber-connect)
+[![CI](https://github.com/magnifito/viber-connect/actions/workflows/ci.yml/badge.svg)](https://github.com/magnifito/viber-connect/actions/workflows/ci.yml)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/@puralex/viber-connect?color=7360F2)](https://bundlephobia.com/package/@puralex/viber-connect)
+[![license](https://img.shields.io/npm/l/@puralex/viber-connect?color=7360F2)](LICENSE)
 
 **Free, open-source toolkit for adding [Viber Click-to-Chat](https://www.viber.com/) buttons to any store, directory, or listing.**
 One click takes a visitor from a product page straight into a Viber chat with the seller — no
 "Add contact", no copy-pasting numbers.
 
 🔗 **[Live builder & docs →](https://magnifito.github.io/viber-connect/)** · generate a button, copy, paste.
+
+<a href="https://magnifito.github.io/viber-connect/"><img src="assets/badges/chat-on-viber.svg" alt="Chat on Viber" height="30"></a>
+&nbsp;
+<a href="https://magnifito.github.io/viber-connect/"><img src="assets/badges/chat-on-viber-outline.svg" alt="Chat on Viber" height="30"></a>
+&nbsp;
+<img src="assets/badges/viber-verified.svg" alt="Viber Business" height="30">
 
 ---
 
