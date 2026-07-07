@@ -1,6 +1,6 @@
 {
   "name": "@puralex/viber-connect-server",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Framework-agnostic backend handler to validate Viber Business accounts, so partners never render a dead button.",
   "type": "module",
   "main": "./dist/index.cjs",

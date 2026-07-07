@@ -1,6 +1,6 @@
 {
   "name": "@puralex/viber-connect-web-component",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "<viber-button> custom element for Viber Click-to-Chat. Drop into any HTML page.",
   "type": "module",
   "main": "./dist/index.cjs",
