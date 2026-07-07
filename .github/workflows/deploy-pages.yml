@@ -30,7 +30,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      # base defaults to /viber-button/ — matches a project Pages site.
+      # base defaults to /viber-connect/ — matches a project Pages site.
       # For a custom domain, set VITE_BASE=/ here.
       - run: pnpm build:site
       - uses: actions/upload-pages-artifact@v3

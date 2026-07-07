@@ -29,13 +29,13 @@ Self-hosted SVGs — no external service, no tracking. Wrap them in a link to th
 
 **Markdown** (replace the number with the seller's international digits):
 ```md
-[![Chat on Viber](https://cdn.jsdelivr.net/gh/magnifito/viber-button/assets/badges/chat-on-viber.svg)](https://viber.me/359881234567)
+[![Chat on Viber](https://cdn.jsdelivr.net/gh/magnifito/viber-connect/assets/badges/chat-on-viber.svg)](https://viber.me/359881234567)
 ```
 
 **HTML:**
 ```html
 <a href="https://viber.me/359881234567?utm_source=website">
-  <img src="https://cdn.jsdelivr.net/gh/magnifito/viber-button/assets/badges/chat-on-viber.svg"
+  <img src="https://cdn.jsdelivr.net/gh/magnifito/viber-connect/assets/badges/chat-on-viber.svg"
        alt="Chat on Viber" height="28">
 </a>
 ```

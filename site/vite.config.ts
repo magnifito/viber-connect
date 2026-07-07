@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 // Override with VITE_BASE when using a custom domain (set VITE_BASE=/).
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE ?? "/viber-button/",
+  base: process.env.VITE_BASE ?? "/viber-connect/",
 });

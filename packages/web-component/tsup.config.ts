@@ -17,6 +17,6 @@ export default defineConfig([
     minify: true,
     sourcemap: false,
     target: "es2019",
-    noExternal: [/@puralex\/viber-button/],
+    noExternal: [/@puralex\/viber-connect/],
   },
 ]);

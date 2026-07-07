@@ -4,7 +4,7 @@
 One click takes a visitor from a product page straight into a Viber chat with the seller — no
 "Add contact", no copy-pasting numbers.
 
-🔗 **[Live builder & docs →](https://your-org.github.io/viber-button/)** · generate a button, copy, paste.
+🔗 **[Live builder & docs →](https://magnifito.github.io/viber-connect/)** · generate a button, copy, paste.
 
 ---
 

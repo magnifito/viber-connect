@@ -77,7 +77,7 @@ export function Gallery() {
       </div>
       <p className="section-sub" style={{ marginTop: 28 }}>
         Prefer a static image for a README or email signature? See{" "}
-        <a href="https://github.com/magnifito/viber-button/blob/main/BADGES.md">BADGES.md</a>.
+        <a href="https://github.com/magnifito/viber-connect/blob/main/BADGES.md">BADGES.md</a>.
       </p>
     </section>
   );

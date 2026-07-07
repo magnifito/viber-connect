@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magnifito/viber-button.git",
+    "url": "git+https://github.com/magnifito/viber-connect.git",
     "directory": "packages/web-component"
   },
-  "homepage": "https://github.com/magnifito/viber-button/tree/main/packages/web-component#readme",
+  "homepage": "https://github.com/magnifito/viber-connect/tree/main/packages/web-component#readme",
   "bugs": {
-    "url": "https://github.com/magnifito/viber-button/issues"
+    "url": "https://github.com/magnifito/viber-connect/issues"
   },
   "author": "Magnifito"
 }

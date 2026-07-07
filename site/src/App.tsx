@@ -1,7 +1,7 @@
 import { Builder } from "./Builder.js";
 import { Gallery } from "./Gallery.js";
 
-const REPO = "https://github.com/magnifito/viber-button";
+const REPO = "https://github.com/magnifito/viber-connect";
 
 function Feature({ title, children }: { title: string; children: React.ReactNode }) {
   return (
