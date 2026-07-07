@@ -1,5 +1,17 @@
 # @puralex/viber-connect-web-component
 
+## 0.3.0
+
+### Minor Changes
+
+- fd76957: Improve the floating (`fab`) variant: it now sits as a round bubble bottom-right, pulses gently to
+  draw attention (respecting `prefers-reduced-motion`), and expands to a "Chat on Viber" pill on
+  hover/focus. The label is kept in the DOM for screen readers.
+
+### Patch Changes
+
+- @puralex/viber-connect@0.3.0
+
 ## 0.2.2
 
 ### Patch Changes
