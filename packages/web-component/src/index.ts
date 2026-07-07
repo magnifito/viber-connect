@@ -100,7 +100,7 @@ export class ViberButtonElement extends HTMLElement {
     this.anchor.setAttribute("aria-label", "Chat on Viber");
 
     const icon = hideIcon ? "" : `<span class="icon">${LOGO}</span>`;
-    const text = variant === "icon" || variant === "fab" ? "" : `<span class="label">${escapeHtml(label)}</span>`;
+    const text = variant === "icon" ? "" : `<span class="label">${escapeHtml(label)}</span>`;
     this.anchor.innerHTML = `${icon}${text}`;
   }
 
@@ -118,8 +118,14 @@ export class ViberButtonElement extends HTMLElement {
       }
       .viber-btn:hover { background: var(--viber-color-hover); }
       .viber-btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--viber-color) 45%, transparent); outline-offset: 2px; }
-      .viber-btn--icon, .viber-btn--fab { padding: .6em; border-radius: 999px; }
-      .viber-btn--fab { position: fixed; right: 20px; bottom: 20px; box-shadow: 0 6px 20px rgba(115,96,242,.4); }
+      .viber-btn--icon { padding: .6em; border-radius: 999px; }
+      .viber-btn--fab { position: fixed; right: 20px; bottom: 20px; padding: 14px; gap: 0; border-radius: 999px; box-shadow: 0 8px 24px rgba(115,96,242,.45); z-index: 2147483000; }
+      .viber-btn--fab .icon { font-size: 1.5em; }
+      .viber-btn--fab .label { display: inline-block; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; transition: max-width .28s ease, margin .28s ease, opacity .2s ease; }
+      .viber-btn--fab:hover .label, .viber-btn--fab:focus-visible .label { max-width: 12em; margin-left: .5em; opacity: 1; }
+      .viber-btn--fab::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; animation: viber-fab-pulse 2.2s ease-out infinite; }
+      @keyframes viber-fab-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--viber-color) 55%, transparent); } 70% { box-shadow: 0 0 0 16px rgba(115,96,242,0); } 100% { box-shadow: 0 0 0 0 rgba(115,96,242,0); } }
+      @media (prefers-reduced-motion: reduce) { .viber-btn--fab::after { animation: none; } .viber-btn--fab .label { transition: none; } }
       .viber-btn--link { background: none; color: var(--viber-color); padding: 0; }
       .viber-btn--link:hover { background: none; text-decoration: underline; }
       .viber-btn--outline { background: transparent; color: var(--viber-color); border: 2px solid var(--viber-color); padding: calc(.65em - 2px) calc(1.15em - 2px); }

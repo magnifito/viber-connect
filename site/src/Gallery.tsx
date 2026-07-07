@@ -22,6 +22,7 @@ const ITEMS: Item[] = [
   },
   { variant: "icon", title: "Icon only", desc: "Round, minimal footprint." },
   { variant: "link", title: "Text link", desc: "Inline, inside copy." },
+  { variant: "fab", title: "Floating bubble", desc: "Fixed bottom-right, site-wide. See it live ↘" },
 ];
 
 function snippetFor(v: ViberButtonVariant, label?: string): string {
@@ -42,7 +43,12 @@ function GalleryCard({ item }: { item: Item }) {
   return (
     <div className="gcard">
       <div className="gcard__stage">
-        <ViberButton phone={DEMO_PHONE} variant={item.variant} label={item.label} />
+        {/* fab is position:fixed — show a round bubble in-card; the real one floats site-wide */}
+        <ViberButton
+          phone={DEMO_PHONE}
+          variant={item.variant === "fab" ? "icon" : item.variant}
+          label={item.label}
+        />
       </div>
       <div className="gcard__meta">
         <strong>{item.title}</strong>

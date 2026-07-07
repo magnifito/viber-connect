@@ -1,3 +1,4 @@
+import { ViberButton } from "@puralex/viber-connect-react";
 import { Builder } from "./Builder.js";
 import { Gallery } from "./Gallery.js";
 
@@ -128,6 +129,16 @@ buildViberLink({ phone: "0888123456", text: "Hi!", utm: { source: "site" } });
           </a>
         </p>
       </footer>
+
+      {/* Live demo of the floating (fab) variant — pulses, expands to a label on hover. */}
+      <ViberButton
+        phone="+30 231 231 1388"
+        variant="fab"
+        label="Chat on Viber"
+        text="Hi! Saw the Viber Connect demo"
+        utm={{ source: "viber-connect-site", medium: "fab" }}
+        aria-label="Chat on Viber (demo)"
+      />
     </>
   );
 }

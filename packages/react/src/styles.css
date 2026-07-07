@@ -88,18 +88,62 @@
   background: color-mix(in srgb, var(--viber-color) 20%, #fff);
 }
 
-/* variant: floating action button */
+/* variant: floating action button — round bubble that expands to a pill on hover */
 .viber-btn--fab {
   position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 2147483000;
-  padding: 0.9em;
+  padding: 14px;
+  gap: 0;
   border-radius: 999px;
-  box-shadow: 0 6px 20px rgba(115, 96, 242, 0.4);
+  box-shadow: 0 8px 24px rgba(115, 96, 242, 0.45);
+}
+.viber-btn--fab .viber-btn__icon {
+  font-size: 1.5em;
 }
 .viber-btn--fab .viber-btn__label {
-  display: none;
+  display: inline-block;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 0;
+  opacity: 0;
+  transition: max-width 0.28s ease, margin 0.28s ease, opacity 0.2s ease;
+}
+.viber-btn--fab:hover .viber-btn__label,
+.viber-btn--fab:focus-visible .viber-btn__label {
+  max-width: 12em;
+  margin-left: 0.5em;
+  opacity: 1;
+}
+/* pulsing ring to draw the eye */
+.viber-btn--fab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: viber-fab-pulse 2.2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes viber-fab-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--viber-color) 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(115, 96, 242, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(115, 96, 242, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .viber-btn--fab::after {
+    animation: none;
+  }
+  .viber-btn--fab .viber-btn__label {
+    transition: none;
+  }
 }
 
 .viber-btn[aria-disabled="true"] {

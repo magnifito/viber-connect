@@ -204,7 +204,7 @@ export function Builder() {
               phone={s.phone}
               label={s.label}
               text={s.text}
-              variant={s.variant === "fab" ? "full" : s.variant}
+              variant={s.variant === "fab" ? "icon" : s.variant}
               color={s.color}
               hideIcon={s.hideIcon}
               utm={{
