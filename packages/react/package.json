@@ -1,5 +1,5 @@
 {
-  "name": "@viberbutton/react",
+  "name": "@puralex/viber-connect-react",
   "version": "0.1.0",
   "description": "React <ViberButton /> component for Viber Click-to-Chat.",
   "type": "module",
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@viberbutton/core": "workspace:*"
+    "@puralex/viber-connect": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=17"

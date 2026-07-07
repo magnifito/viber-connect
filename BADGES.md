@@ -54,7 +54,7 @@ and it emits a `viber:click` event for analytics.
 
 ```html
 <script type="module"
-  src="https://cdn.jsdelivr.net/npm/@viberbutton/web-component/dist/viber-button.global.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@puralex/viber-connect-web-component/dist/viber-button.global.js"></script>
 
 <!-- Primary CTA -->
 <viber-button phone="+30 231 231 1388" label="Chat on Viber" utm-source="website"></viber-button>
@@ -84,8 +84,8 @@ and it emits a `viber:click` event for analytics.
 ## 3. Live buttons (React)
 
 ```tsx
-import { ViberButton } from "@viberbutton/react";
-import "@viberbutton/react/styles.css";
+import { ViberButton } from "@puralex/viber-connect-react";
+import "@puralex/viber-connect-react/styles.css";
 
 <ViberButton phone="+30 231 231 1388" utm={{ source: "website" }} />
 <ViberButton phone="+30 231 231 1388" variant="outline" />
@@ -158,12 +158,12 @@ Shared attributes/props: `phone`, `text` (+`{product}`/`{url}` placeholders), `l
 An unregistered number shows "Page Not Found" in Viber. Gate the badge on a validation check:
 
 ```ts
-import { validateViberNumber } from "@viberbutton/core";
+import { validateViberNumber } from "@puralex/viber-connect";
 
 const { hasBusinessAccount } = await validateViberNumber("+302312311388", {
-  endpoint: "https://api.yoursite.com/viber/validate", // your backend — see @viberbutton/server
+  endpoint: "https://api.yoursite.com/viber/validate", // your backend — see @puralex/viber-connect-server
 });
 if (hasBusinessAccount !== false) renderViberButton();
 ```
 
-See [`@viberbutton/server`](packages/server) for the backend handler.
+See [`@puralex/viber-connect-server`](packages/server) for the backend handler.

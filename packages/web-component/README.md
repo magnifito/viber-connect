@@ -1,11 +1,11 @@
-# @viberbutton/web-component
+# @puralex/viber-connect-web-component
 
 `<viber-button>` custom element for Viber Click-to-Chat. Framework-free — drop into any HTML page.
 
 **CDN (no build):**
 ```html
 <script type="module"
-  src="https://cdn.jsdelivr.net/npm/@viberbutton/web-component/dist/viber-button.global.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@puralex/viber-connect-web-component/dist/viber-button.global.js"></script>
 
 <viber-button
   phone="+359 88 123 4567"
@@ -19,10 +19,10 @@
 
 **npm:**
 ```bash
-npm install @viberbutton/web-component
+npm install @puralex/viber-connect-web-component
 ```
 ```ts
-import "@viberbutton/web-component"; // registers <viber-button>
+import "@puralex/viber-connect-web-component"; // registers <viber-button>
 ```
 
 Attributes: `phone`, `text`, `label`, `variant` (`full`/`icon`/`link`/`fab`), `color`, `target`,

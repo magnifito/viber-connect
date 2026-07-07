@@ -8,7 +8,7 @@ import {
   buildViberLink,
   type UtmParams,
   type ViberLinkTarget,
-} from "@viberbutton/core";
+} from "@puralex/viber-connect";
 import { ViberLogo } from "./ViberLogo.js";
 
 export type ViberButtonVariant =
@@ -47,7 +47,7 @@ export interface ViberButtonProps
  * and is keyboard/screen-reader friendly.
  *
  * Remember to import the stylesheet once in your app:
- * `import "@viberbutton/react/styles.css";`
+ * `import "@puralex/viber-connect-react/styles.css";`
  */
 export function ViberButton({
   phone,

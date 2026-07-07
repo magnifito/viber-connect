@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-The latest published `0.x` release of each `@viberbutton/*` package is supported.
+The latest published `0.x` release of each `@puralex/*` package is supported.
 
 ## Reporting a vulnerability
 

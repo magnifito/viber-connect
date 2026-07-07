@@ -47,7 +47,7 @@ export function App() {
               Read the docs
             </a>
           </div>
-          <code className="install">npm i @viberbutton/react</code>
+          <code className="install">npm i @puralex/viber-connect-react</code>
         </section>
 
         <section id="why" className="why">
@@ -88,7 +88,7 @@ export function App() {
           <h3>Plain HTML (no build step)</h3>
           <pre>
             <code>{`<script type="module"
-  src="https://cdn.jsdelivr.net/npm/@viberbutton/web-component/dist/viber-button.global.js">
+  src="https://cdn.jsdelivr.net/npm/@puralex/viber-connect-web-component/dist/viber-button.global.js">
 </script>
 
 <viber-button phone="+359 88 123 4567" label="Chat on Viber"></viber-button>`}</code>
@@ -96,8 +96,8 @@ export function App() {
 
           <h3>React</h3>
           <pre>
-            <code>{`import { ViberButton } from "@viberbutton/react";
-import "@viberbutton/react/styles.css";
+            <code>{`import { ViberButton } from "@puralex/viber-connect-react";
+import "@puralex/viber-connect-react/styles.css";
 
 <ViberButton phone="+359 88 123 4567" text="Interested in {product}"
   vars={{ product: "Red Shoes" }} utm={{ source: "shoply" }} />`}</code>
@@ -105,7 +105,7 @@ import "@viberbutton/react/styles.css";
 
           <h3>Just the link (any language)</h3>
           <pre>
-            <code>{`import { buildViberLink } from "@viberbutton/core";
+            <code>{`import { buildViberLink } from "@puralex/viber-connect";
 
 buildViberLink({ phone: "0888123456", text: "Hi!", utm: { source: "site" } });
 // → https://viber.me/888123456?utm_source=site&text=Hi!`}</code>

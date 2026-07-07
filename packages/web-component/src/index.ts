@@ -1,4 +1,4 @@
-import { buildViberLink, sanitizePhone, type ViberLinkTarget } from "@viberbutton/core";
+import { buildViberLink, sanitizePhone, type ViberLinkTarget } from "@puralex/viber-connect";
 
 const VIBER_PURPLE = "#7360f2";
 

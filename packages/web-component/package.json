@@ -1,5 +1,5 @@
 {
-  "name": "@viberbutton/web-component",
+  "name": "@puralex/viber-connect-web-component",
   "version": "0.1.0",
   "description": "<viber-button> custom element for Viber Click-to-Chat. Drop into any HTML page.",
   "type": "module",
@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@viberbutton/core": "workspace:*"
+    "@puralex/viber-connect": "workspace:*"
   },
   "devDependencies": {
     "jsdom": "^25.0.0",

@@ -17,7 +17,7 @@ export interface ValidateOptions {
    * `{ hasBusinessAccount: boolean, name?: string }`.
    *
    * Viber does not expose a public browser-callable validation API, so this must
-   * point at your own server (see `@viberbutton/server`). Without it, validation
+   * point at your own server (see `@puralex/viber-connect-server`). Without it, validation
    * is skipped and `hasBusinessAccount` is `null`.
    */
   endpoint?: string;

@@ -1,4 +1,4 @@
-import type { ViberButtonVariant } from "@viberbutton/react";
+import type { ViberButtonVariant } from "@puralex/viber-connect-react";
 
 export interface BuilderState {
   phone: string;
@@ -33,7 +33,7 @@ export function htmlSnippet(s: BuilderState): string {
     (s.hideIcon ? attr("hide-icon", true) : "") +
     `></viber-button>`;
   return `<!-- Load once, anywhere before </body> -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@viberbutton/web-component/dist/viber-button.global.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@puralex/viber-connect-web-component/dist/viber-button.global.js"></script>
 
 ${el}`;
 }
@@ -57,8 +57,8 @@ export function reactSnippet(s: BuilderState): string {
         .join(", ")} }}`,
   ].filter(Boolean);
 
-  return `import { ViberButton } from "@viberbutton/react";
-import "@viberbutton/react/styles.css";
+  return `import { ViberButton } from "@puralex/viber-connect-react";
+import "@puralex/viber-connect-react/styles.css";
 
 <ViberButton
   ${props.join("\n  ")}

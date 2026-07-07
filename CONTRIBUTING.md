@@ -34,7 +34,7 @@ Requires Node ≥ 18 and pnpm.
 ## Guidelines
 
 - **Linter is oxlint**, never ESLint. Use `// oxlint-disable-*` only if truly needed.
-- Keep `@viberbutton/core` dependency-free.
+- Keep `@puralex/viber-connect` dependency-free.
 - Don't hardcode a real merchant's number in examples — use the docs placeholder.
 - New button/badge variants: add to both React and the web component, plus the site gallery.
 

@@ -1,15 +1,15 @@
-# @viberbutton/core
+# @puralex/viber-connect
 
 Zero-dependency builder for [Viber Click-to-Chat](https://www.viber.com/) deep links.
 Sanitizes phone numbers, interpolates a pre-filled draft message, appends UTM tracking,
 and emits both the web (`viber.me`) and native (`viber://`) URLs.
 
 ```bash
-npm install @viberbutton/core
+npm install @puralex/viber-connect
 ```
 
 ```ts
-import { buildViberLink, buildViberLinks, validateViberNumber } from "@viberbutton/core";
+import { buildViberLink, buildViberLinks, validateViberNumber } from "@puralex/viber-connect";
 
 // One string, safe for <a href> (redirects into the app on mobile):
 buildViberLink({
@@ -23,7 +23,7 @@ buildViberLink({
 // Both flavors + the sanitized number:
 const { web, app, number, message } = buildViberLinks({ phone: "0888123456" });
 
-// Guard against dead buttons (needs your own backend proxy — see @viberbutton/server):
+// Guard against dead buttons (needs your own backend proxy — see @puralex/viber-connect-server):
 const { hasBusinessAccount } = await validateViberNumber("+359881234567", {
   endpoint: "https://api.yoursite.com/viber/validate",
 });

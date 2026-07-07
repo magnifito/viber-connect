@@ -32,7 +32,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@viberbutton/core':
+      '@puralex/viber-connect':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -60,7 +60,7 @@ importers:
 
   packages/server:
     dependencies:
-      '@viberbutton/core':
+      '@puralex/viber-connect':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -76,7 +76,7 @@ importers:
 
   packages/web-component:
     dependencies:
-      '@viberbutton/core':
+      '@puralex/viber-connect':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -95,10 +95,10 @@ importers:
 
   site:
     dependencies:
-      '@viberbutton/core':
+      '@puralex/viber-connect':
         specifier: workspace:*
         version: link:../packages/core
-      '@viberbutton/react':
+      '@puralex/viber-connect-react':
         specifier: workspace:*
         version: link:../packages/react
       qrcode:

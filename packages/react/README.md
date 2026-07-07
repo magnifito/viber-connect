@@ -1,14 +1,14 @@
-# @viberbutton/react
+# @puralex/viber-connect-react
 
 React `<ViberButton />` for Viber Click-to-Chat. Renders an `<a>` — works without JS, keyboard/SR friendly.
 
 ```bash
-npm install @viberbutton/react
+npm install @puralex/viber-connect-react
 ```
 
 ```tsx
-import { ViberButton } from "@viberbutton/react";
-import "@viberbutton/react/styles.css"; // import once in your app
+import { ViberButton } from "@puralex/viber-connect-react";
+import "@puralex/viber-connect-react/styles.css"; // import once in your app
 
 <ViberButton
   phone="+359 88 123 4567"

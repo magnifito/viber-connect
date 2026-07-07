@@ -3,8 +3,8 @@ import {
   buildViberLinks,
   isValidPhone,
   sanitizePhone,
-} from "@viberbutton/core";
-import { ViberButton, type ViberButtonVariant } from "@viberbutton/react";
+} from "@puralex/viber-connect";
+import { ViberButton, type ViberButtonVariant } from "@puralex/viber-connect-react";
 import QRCode from "qrcode";
 import { htmlSnippet, reactSnippet, type BuilderState } from "./snippets.js";
 

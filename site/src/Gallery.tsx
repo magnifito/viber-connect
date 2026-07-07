@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ViberButton, type ViberButtonVariant } from "@viberbutton/react";
+import { ViberButton, type ViberButtonVariant } from "@puralex/viber-connect-react";
 
 const DEMO_PHONE = "+30 231 231 1388";
 

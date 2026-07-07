@@ -1,4 +1,4 @@
-# @viberbutton/server
+# @puralex/viber-connect-server
 
 Transport-agnostic backend handler to validate a **Viber Business account** before you render a
 button — so visitors never hit a "Page Not Found" screen.
@@ -8,11 +8,11 @@ button — so visitors never hit a "Page Not Found" screen.
 > validation, caching, and a clean response shape.
 
 ```bash
-npm install @viberbutton/server
+npm install @puralex/viber-connect-server
 ```
 
 ```ts
-import { createValidationHandler } from "@viberbutton/server";
+import { createValidationHandler } from "@puralex/viber-connect-server";
 
 const validate = createValidationHandler({
   checker: async (number) => {
@@ -30,4 +30,4 @@ app.get("/viber/validate", async (req, res) => {
 ```
 
 Point the front end at this endpoint via `validateViberNumber(phone, { endpoint })` from
-`@viberbutton/core`. MIT.
+`@puralex/viber-connect`. MIT.

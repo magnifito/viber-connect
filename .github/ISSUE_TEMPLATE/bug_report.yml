@@ -7,10 +7,10 @@ body:
     attributes:
       label: Package
       options:
-        - "@viberbutton/core"
-        - "@viberbutton/react"
-        - "@viberbutton/web-component"
-        - "@viberbutton/server"
+        - "@puralex/viber-connect"
+        - "@puralex/viber-connect-react"
+        - "@puralex/viber-connect-web-component"
+        - "@puralex/viber-connect-server"
         - site / generator
     validations:
       required: true

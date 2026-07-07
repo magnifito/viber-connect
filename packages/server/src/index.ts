@@ -1,4 +1,4 @@
-import { sanitizePhone } from "@viberbutton/core";
+import { sanitizePhone } from "@puralex/viber-connect";
 
 export interface BusinessCheck {
   hasBusinessAccount: boolean | null;

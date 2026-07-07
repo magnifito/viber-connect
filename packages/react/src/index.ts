@@ -7,9 +7,9 @@ export {
   buildViberLinks,
   validateViberNumber,
   sanitizePhone,
-} from "@viberbutton/core";
+} from "@puralex/viber-connect";
 export type {
   ViberLinkOptions,
   ViberLinks,
   UtmParams,
-} from "@viberbutton/core";
+} from "@puralex/viber-connect";

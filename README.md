@@ -21,10 +21,10 @@ One click takes a visitor from a product page straight into a Viber chat with th
 
 | Package | What it is |
 | --- | --- |
-| [`@viberbutton/core`](packages/core) | Zero-dep link builder: sanitize number, interpolate draft, UTM, `viber.me` + `viber://`. |
-| [`@viberbutton/react`](packages/react) | `<ViberButton />` component (full / icon / link / FAB variants). |
-| [`@viberbutton/web-component`](packages/web-component) | `<viber-button>` custom element — drop into plain HTML via CDN. |
-| [`@viberbutton/server`](packages/server) | Backend handler to validate a Viber Business account (avoid dead buttons). |
+| [`@puralex/viber-connect`](packages/core) | Zero-dep link builder: sanitize number, interpolate draft, UTM, `viber.me` + `viber://`. |
+| [`@puralex/viber-connect-react`](packages/react) | `<ViberButton />` component (full / icon / link / FAB variants). |
+| [`@puralex/viber-connect-web-component`](packages/web-component) | `<viber-button>` custom element — drop into plain HTML via CDN. |
+| [`@puralex/viber-connect-server`](packages/server) | Backend handler to validate a Viber Business account (avoid dead buttons). |
 | [`site/`](site) | The GitHub Pages generator + docs. |
 
 ## Quick start
@@ -32,15 +32,15 @@ One click takes a visitor from a product page straight into a Viber chat with th
 **Plain HTML — no build:**
 ```html
 <script type="module"
-  src="https://cdn.jsdelivr.net/npm/@viberbutton/web-component/dist/viber-button.global.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@puralex/viber-connect-web-component/dist/viber-button.global.js"></script>
 
 <viber-button phone="+359 88 123 4567" label="Chat on Viber"></viber-button>
 ```
 
 **React:**
 ```tsx
-import { ViberButton } from "@viberbutton/react";
-import "@viberbutton/react/styles.css";
+import { ViberButton } from "@puralex/viber-connect-react";
+import "@puralex/viber-connect-react/styles.css";
 
 <ViberButton
   phone="+359 88 123 4567"
@@ -52,7 +52,7 @@ import "@viberbutton/react/styles.css";
 
 **Just the link (any language / server):**
 ```ts
-import { buildViberLink } from "@viberbutton/core";
+import { buildViberLink } from "@puralex/viber-connect";
 
 buildViberLink({ phone: "0888123456", text: "Hi!", utm: { source: "site" } });
 // → https://viber.me/888123456?utm_source=site&text=Hi!
@@ -65,7 +65,7 @@ https://viber.me/<intl-number>?utm_source=<platform>&text=<url-encoded-draft>
 ```
 - Number must be **full international format** — leading zeros, `+`, spaces, dashes, brackets stripped automatically.
 - The number must belong to an **active Viber Business account**, or the link shows "Page Not Found".
-  Use [`@viberbutton/server`](packages/server) + `validateViberNumber()` to check before rendering.
+  Use [`@puralex/viber-connect-server`](packages/server) + `validateViberNumber()` to check before rendering.
 
 ## Develop
 
