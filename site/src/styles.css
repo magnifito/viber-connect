@@ -192,6 +192,9 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px;
+  /* Allow grid children to shrink so inner <pre> can scroll instead of
+     stretching the column (grid items default to min-width:auto). */
+  min-width: 0;
 }
 .builder h3 {
   margin: 18px 0 12px;
@@ -325,8 +328,14 @@ pre {
   border: 1px solid var(--border);
   border-radius: 0 10px 10px 10px;
   overflow-x: auto;
+  max-width: 100%;
   font-size: 0.82rem;
   line-height: 1.5;
+}
+.snippet,
+.image-out {
+  min-width: 0;
+  max-width: 100%;
 }
 .docs pre {
   border-radius: 10px;
