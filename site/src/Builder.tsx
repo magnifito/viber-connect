@@ -7,6 +7,16 @@ import {
 import { ViberButton, type ViberButtonVariant } from "@puralex/viber-connect-react";
 import QRCode from "qrcode";
 import { htmlSnippet, reactSnippet, type BuilderState } from "./snippets.js";
+import { buildSvgBadge, svgToDataUri, svgToPngBlob } from "./svgBadge.js";
+
+function download(filename: string, blobOrUrl: Blob | string) {
+  const url = typeof blobOrUrl === "string" ? blobOrUrl : URL.createObjectURL(blobOrUrl);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  if (typeof blobOrUrl !== "string") setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
 
 const VARIANTS: ViberButtonVariant[] = ["full", "icon", "link", "fab"];
 
@@ -40,7 +50,8 @@ function CopyBtn({ value }: { value: string }) {
 
 export function Builder() {
   const [s, setS] = useState<BuilderState>(initial);
-  const [tab, setTab] = useState<"html" | "react" | "url">("html");
+  const [tab, setTab] = useState<"html" | "react" | "url" | "image">("html");
+  const [format, setFormat] = useState<"svg" | "png">("svg");
   const [qr, setQr] = useState<string>("");
 
   const set = <K extends keyof BuilderState>(k: K, v: BuilderState[K]) =>
@@ -66,6 +77,16 @@ export function Builder() {
     if (!links) return setQr("");
     QRCode.toDataURL(links.web, { width: 180, margin: 1 }).then(setQr, () => setQr(""));
   }, [links]);
+
+  const svgBadge = useMemo(
+    () =>
+      buildSvgBadge({
+        label: s.label,
+        color: s.color,
+        style: s.variant === "outline" ? "outline" : "solid",
+      }),
+    [s.label, s.color, s.variant],
+  );
 
   const snippet =
     tab === "html" ? htmlSnippet(s) : tab === "react" ? reactSnippet(s) : links?.web ?? "";
@@ -191,20 +212,76 @@ export function Builder() {
 
         <div className="snippet">
           <div className="tabs">
-            {(["html", "react", "url"] as const).map((t) => (
+            {(["html", "react", "url", "image"] as const).map((t) => (
               <button
                 key={t}
                 className={tab === t ? "active" : ""}
                 onClick={() => setTab(t)}
               >
-                {t === "html" ? "HTML" : t === "react" ? "React" : "Raw URL"}
+                {t === "html" ? "HTML" : t === "react" ? "React" : t === "url" ? "Raw URL" : "Image"}
               </button>
             ))}
-            <CopyBtn value={snippet} />
+            {tab !== "image" && <CopyBtn value={snippet} />}
           </div>
-          <pre>
-            <code>{snippet || "// enter a valid number"}</code>
-          </pre>
+
+          {tab === "image" ? (
+            <div className="image-out">
+              <div className="format-toggle" role="group" aria-label="Image format">
+                {(["svg", "png"] as const).map((f) => (
+                  <button
+                    key={f}
+                    className={format === f ? "active" : ""}
+                    onClick={() => setFormat(f)}
+                  >
+                    {f === "svg" ? "Vector (SVG)" : "Raster (PNG)"}
+                  </button>
+                ))}
+              </div>
+
+              <div className="image-preview">
+                <img src={svgToDataUri(svgBadge)} alt="Viber badge preview" height={28} />
+              </div>
+
+              <p className="hint">
+                {format === "svg"
+                  ? "Crisp at any size, tiny file — best for websites & READMEs. Some email clients don't render SVG."
+                  : "Universal — best for email signatures, docs, and anywhere SVG isn't supported. Exports at 3× for retina."}
+              </p>
+
+              <div className="image-actions">
+                {format === "svg" ? (
+                  <>
+                    <button onClick={() => download("chat-on-viber.svg", new Blob([svgBadge], { type: "image/svg+xml" }))}>
+                      Download .svg
+                    </button>
+                    <CopyBtn value={svgBadge} />
+                  </>
+                ) : (
+                  <button
+                    onClick={async () => {
+                      try {
+                        download("chat-on-viber.png", await svgToPngBlob(svgBadge, 3));
+                      } catch {
+                        /* ignore */
+                      }
+                    }}
+                  >
+                    Download .png
+                  </button>
+                )}
+              </div>
+
+              {format === "svg" && (
+                <pre>
+                  <code>{svgBadge}</code>
+                </pre>
+              )}
+            </div>
+          ) : (
+            <pre>
+              <code>{snippet || "// enter a valid number"}</code>
+            </pre>
+          )}
         </div>
       </div>
     </div>

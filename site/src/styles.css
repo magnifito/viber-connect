@@ -336,6 +336,65 @@ pre {
   margin-top: 26px;
 }
 
+/* image (vector/raster) output */
+.image-out {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 0 10px 10px 10px;
+  padding: 14px;
+}
+.format-toggle {
+  display: inline-flex;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+.format-toggle button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.format-toggle button.active {
+  background: var(--viber);
+  color: #fff;
+}
+.image-preview {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background: repeating-conic-gradient(#ffffff 0% 25%, #f2f2f7 0% 50%) 50% / 20px 20px;
+}
+.image-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.image-actions button,
+.image-out .copy {
+  background: var(--viber);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.image-out pre {
+  border-radius: 8px;
+  max-height: 160px;
+}
+
 /* gallery */
 .gallery h2 {
   text-align: center;
