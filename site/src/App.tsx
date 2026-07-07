@@ -50,6 +50,8 @@ export function App() {
           <code className="install">npm i @puralex/viber-connect-react</code>
         </section>
 
+        <Gallery />
+
         <section id="why" className="why">
           <h2>Why a native Viber button?</h2>
           <div className="features">
@@ -79,8 +81,6 @@ export function App() {
           </p>
           <Builder />
         </section>
-
-        <Gallery />
 
         <section id="docs" className="docs">
           <h2>Install &amp; use</h2>

@@ -253,6 +253,38 @@ section {
   font-size: 0.8rem;
   color: var(--muted);
 }
+.hint code,
+.tokens code {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 0.9em;
+  color: var(--viber-2);
+}
+.tokens {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.tokens button {
+  background: color-mix(in srgb, var(--viber) 16%, transparent);
+  color: var(--viber-2);
+  border: 1px solid color-mix(in srgb, var(--viber) 40%, transparent);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font: inherit;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.tokens button:hover {
+  background: color-mix(in srgb, var(--viber) 28%, transparent);
+}
 .hint.ok {
   color: var(--ok);
 }

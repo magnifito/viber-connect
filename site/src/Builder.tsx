@@ -123,8 +123,23 @@ export function Builder() {
             rows={2}
             onChange={(e) => set("text", e.target.value)}
           />
+          <div className="tokens">
+            <span>Insert placeholder:</span>
+            {(["{product}", "{url}"] as const).map((tok) => (
+              <button
+                type="button"
+                key={tok}
+                onClick={() => set("text", `${s.text}${s.text && !s.text.endsWith(" ") ? " " : ""}${tok}`)}
+              >
+                {tok}
+              </button>
+            ))}
+          </div>
           <small className="hint">
-            Use <code>{"{product}"}</code>, <code>{"{url}"}</code> — replace them per page.
+            <code>{"{product}"}</code> and <code>{"{url}"}</code> are <strong>placeholders</strong> —
+            your site swaps them for the real product name &amp; page link right before the chat
+            opens (React: <code>vars=&#123;&#123; product, url &#125;&#125;</code>). No code? Just
+            type a fixed message instead.
           </small>
         </label>
 
