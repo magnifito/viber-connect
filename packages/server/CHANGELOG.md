@@ -1,5 +1,11 @@
 # @puralex/viber-connect-server
 
+## 0.2.1
+
+### Patch Changes
+
+- @puralex/viber-connect@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
