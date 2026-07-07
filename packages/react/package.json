@@ -1,6 +1,6 @@
 {
   "name": "@puralex/viber-connect-react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React <ViberButton /> component for Viber Click-to-Chat.",
   "type": "module",
   "main": "./dist/index.cjs",
