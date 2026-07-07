@@ -33,7 +33,7 @@ jobs:
       # base defaults to /viber-connect/ — matches a project Pages site.
       # For a custom domain, set VITE_BASE=/ here.
       - run: pnpm build:site
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site/dist
 
