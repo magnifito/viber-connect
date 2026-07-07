@@ -1,0 +1,113 @@
+.viber-btn {
+  --viber-color: #7360f2;
+  --viber-color-hover: #5f4ddb;
+  --viber-fg: #ffffff;
+  --viber-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  padding: 0.65em 1.15em;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--viber-fg);
+  background: var(--viber-color);
+  border: none;
+  border-radius: var(--viber-radius);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.viber-btn:hover {
+  background: var(--viber-color-hover);
+}
+.viber-btn:active {
+  transform: translateY(1px);
+}
+.viber-btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--viber-color) 45%, transparent);
+  outline-offset: 2px;
+}
+
+/* variant: icon-only */
+.viber-btn--icon {
+  padding: 0.6em;
+  border-radius: 999px;
+}
+.viber-btn--icon .viber-btn__label {
+  display: none;
+}
+
+/* variant: inline text link */
+.viber-btn--link {
+  background: none;
+  color: var(--viber-color);
+  padding: 0;
+  border-radius: 0;
+}
+.viber-btn--link:hover {
+  background: none;
+  color: var(--viber-color-hover);
+  text-decoration: underline;
+}
+
+/* variant: outline */
+.viber-btn--outline {
+  background: transparent;
+  color: var(--viber-color);
+  border: 2px solid var(--viber-color);
+  padding: calc(0.65em - 2px) calc(1.15em - 2px);
+}
+.viber-btn--outline:hover {
+  background: var(--viber-color);
+  color: var(--viber-fg);
+}
+
+/* variant: small pill badge */
+.viber-btn--badge {
+  padding: 0.35em 0.7em;
+  font-size: 0.82em;
+  border-radius: 999px;
+  gap: 0.4em;
+}
+
+/* variant: verified/trust badge (not a strong CTA — signals presence) */
+.viber-btn--verified {
+  background: color-mix(in srgb, var(--viber-color) 12%, #fff);
+  color: var(--viber-color);
+  border: 1px solid color-mix(in srgb, var(--viber-color) 35%, transparent);
+  padding: 0.4em 0.8em;
+  font-size: 0.85em;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.viber-btn--verified:hover {
+  background: color-mix(in srgb, var(--viber-color) 20%, #fff);
+}
+
+/* variant: floating action button */
+.viber-btn--fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483000;
+  padding: 0.9em;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(115, 96, 242, 0.4);
+}
+.viber-btn--fab .viber-btn__label {
+  display: none;
+}
+
+.viber-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.viber-btn__icon {
+  display: inline-flex;
+  font-size: 1.2em;
+}

@@ -1,0 +1,41 @@
+name: 🐛 Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - "@viberbutton/core"
+        - "@viberbutton/react"
+        - "@viberbutton/web-component"
+        - "@viberbutton/server"
+        - site / generator
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal code, a link, or steps. Redact real phone numbers.
+      render: tsx
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.1.0
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: Node 20 · Chrome 126 · React 18
