@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -26,7 +26,7 @@ jobs:
       - run: pnpm build
       - run: pnpm test
       # Opens/updates a "Version Packages" PR, or publishes when that PR is merged.
-      - uses: changesets/action@v1
+      - uses: changesets/action@v2
         with:
           publish: pnpm changeset publish
           title: "chore: version packages"
